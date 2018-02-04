@@ -1,0 +1,119 @@
+
+
+// SN Widget for KB
+
+@mixin sn-widget-kb-variant($background, $icon) {
+
+  .sn-widget-kb-heading {
+    color: $text-color;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $gray-lighter;
+
+    &:before {
+      background-image: url($icon);
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      line-height: 20px;
+      width: 50px;
+      text-align: center;
+      content: '';
+      height: 50px;
+      background-size: 40px 40px;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+    }
+
+  }
+
+  .sn-widget-kb-content {
+    display: inline-block;
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+
+  .sn-widget-kb-tag{
+    >.tag {
+      color: #ffffff;
+      background-color: $background;
+      height: 70px;
+      width: 70px;
+      margin: auto;
+      border-radius: 4px;
+      vertical-align: middle;
+      text-align: center;
+      padding: 5px;
+
+      >.tag-heading {
+          font-size: 30px;
+          font-weight: bold;
+          line-height: 2;
+      }
+      >.tag-subtitle {
+          display: block;
+          font-size: 14px;
+      }
+    }
+  }
+}
+
+
+
+// SN Widget for Product Page
+
+@mixin sn-widget-pp-variant($background, $icon) {
+
+  .sn-widget-pp-heading {
+    color: #ffffff;
+    background-color: $background;
+
+    &:before {
+      background-image: url($icon);
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 5px;
+      line-height: 20px;
+      width: 70px;
+      text-align: center;
+      content: '';
+      height: 70px;
+      background-size: 60px 60px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  .sn-widget-pp-content {
+    display: inline-block;
+    background-color: #fff;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .sn-widget-pp-tag{
+    >.tag {
+      color: #ffffff;
+      background-color: $background;
+      height: 70px;
+      width: 70px;
+      margin: auto;
+      border-radius: 4px;
+      vertical-align: middle;
+      text-align: center;
+      padding: 5px;
+
+      >.tag-heading {
+          font-size: 30px;
+          font-weight: bold;
+      }
+      >.tag-subtitle {
+          display: block;
+          font-size: 14px;
+      }
+    }
+  }
+}

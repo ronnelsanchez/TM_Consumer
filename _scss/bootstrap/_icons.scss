@@ -1,0 +1,61 @@
+//Font Awsome Icon Variant
+.icon-support{
+  @include icon-variant($fa-var-support);
+}
+.icon-download{
+  @include icon-variant($fa-var-download);
+}
+.icon-arrow-circle-up{
+  @include icon-variant($fa-var-arrow-circle-up);
+}
+.icon-star{
+  @include icon-variant($fa-var-star);
+}
+.icon-refresh{
+  @include icon-variant($fa-var-refresh);
+}
+.icon-shopping-basket{
+  @include icon-variant($fa-var-shopping-basket);
+}
+.icon-user-circle-o{
+  @include icon-variant($fa-var-user-circle-o);
+}
+.icon-angle-right{
+  @include icon-variant($fa-var-angle-right);
+}
+.icon-comment-o{
+  @include icon-variant($fa-var-comment-o);
+}
+.icon-comments-o{
+  @include icon-variant($fa-var-comments-o);
+}
+.icon-search{
+  @include icon-variant($fa-var-search);
+}
+.icon-send{
+  @include icon-variant($fa-var-send);
+}
+.icon-wrench{
+  @include icon-variant($fa-var-wrench);
+}
+.icon-youtube-play{
+  @include icon-variant($fa-var-youtube-play);
+}
+.icon-android{
+  @include icon-variant($fa-var-android);
+}
+.icon-apple{
+  @include icon-variant($fa-var-apple);
+}
+.icon-address-book{
+  @include icon-variant($fa-var-address-book);
+}
+.icon-question-circle{
+  @include icon-variant($fa-var-question-circle);
+}
+.icon-laptop{
+  @include icon-variant($fa-var-laptop);
+}
+.icon-phone{
+  @include icon-variant($fa-var-phone);
+}

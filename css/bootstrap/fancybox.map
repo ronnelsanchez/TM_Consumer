@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../scss/bootstrap/fancybox.css",
+	"sources": [
+		"../../scss/bootstrap/fancybox.scss"
+	],
+	"sourcesContent": [
+		"#fancybox-default {\r\n  border-radius: 4px;\r\n\r\n  /* Custom transition - slide from top*/\r\n  transform: translateY(-50px);\r\n  transition: all .33s;\r\n}\r\n\r\n.fancybox-slide--current #fancybox-default {\r\n  transform: translateY(0);\r\n}\r\n"
+	],
+	"mappings": ";AAAA,AAAA,iBAAiB,CAAC;EAChB,aAAa,EAAE,GAAI;EAEnB,uCAAuC;EACvC,SAAS,EAAE,iBAAU;EACrB,UAAU,EAAE,QAAS;CACtB;;;AAED,AAAyB,wBAAD,CAAC,iBAAiB,CAAC;EACzC,SAAS,EAAE,aAAU;CACtB",
+	"names": []
+}

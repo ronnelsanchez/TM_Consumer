@@ -1,0 +1,333 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: $alert-padding;
+  margin: 20px auto;
+  border: 1px solid transparent;
+  border-radius: $alert-border-radius;
+  font-size: 14px;
+  // Headings for larger alerts
+  h4 {
+    margin-top: 0;
+    // Specified for the h4 to prevent conflicts of changing $headings-color
+    color: inherit;
+  }
+
+  .alert-title{
+    margin: 0;
+  }
+
+  // Provide class for links that match alerts
+  .alert-link {
+    font-weight: $alert-link-font-weight;
+    text-decoration: underline;
+  }
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  .alert-content {
+    > p + p {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+
+
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissible {
+  padding-right: ($alert-padding + 20);
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: 21px;
+    color: inherit;
+  }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-success {
+  @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text, $alert-success-icon);
+}
+
+.alert-info {
+  @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text, $alert-info-icon);
+}
+
+.alert-warning {
+  @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text, $alert-warning-icon);
+}
+
+.alert-danger {
+  @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text, $alert-danger-icon);
+}
+
+
+//
+// Notification
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.notification {
+  margin: 20px auto;
+  font-size: 14px;
+  position: relative;
+  @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08));
+  border-radius: 3px;
+  // Headings for larger alerts
+  h4 {
+    margin-top: 0;
+    // Specified for the h4 to prevent conflicts of changing $headings-color
+    color: inherit;
+  }
+
+  .notification-title{
+    margin: 0;
+  }
+
+  // Provide class for links that match alerts
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  .notification-content {
+    > p + p {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+
+
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.notification-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.notification-dismissible {
+  padding-right: ($alert-padding + 20);
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: 21px;
+    color: inherit;
+  }
+}
+
+// Notification  styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.notification-default {
+  @include notification-variant($gray-light, $gray-light, $gray, $alert-info-icon);
+}
+
+.notification-success {
+  @include notification-variant($brand-success, $brand-success, $alert-success-text, $alert-success-icon);
+}
+
+.notification-info {
+  @include notification-variant($brand-info, $brand-info, $alert-info-text, $alert-info-icon);
+}
+
+.notification-warning {
+  @include notification-variant($brand-warning, $brand-warning, $alert-warning-text, $alert-warning-icon);
+}
+
+.notification-danger {
+  @include notification-variant($brand-danger, $brand-danger, $alert-danger-text, $alert-danger-icon);
+}
+
+
+
+//
+// Callout
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.callout {
+  margin: 20px auto;
+  font-size: 14px;
+  border: 1px solid $gray-lighter;
+  border-left-width: 5px;
+  border-radius: 3px;
+  // Headings for larger alerts
+  h4 {
+    margin-top: 0;
+    // Specified for the h4 to prevent conflicts of changing $headings-color
+    color: inherit;
+  }
+
+  .callout-title{
+    margin: 0;
+  }
+
+  // Provide class for links that match alerts
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  .callout-content {
+    > p + p {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+
+
+}
+
+
+// Callout styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.callout-default {
+  @include callout-variant($gray-lighter, $gray-light);
+}
+
+.callout-success {
+  @include callout-variant( $brand-success, $alert-success-text);
+}
+
+.callout-info {
+  @include callout-variant($brand-info, $alert-info-text);
+}
+
+.callout-warning {
+  @include callout-variant($brand-warning, $alert-warning-text);
+}
+
+.callout-red {
+  @include callout-variant($brand-red, $brand-red);
+}
+
+.callout-danger {
+  @include callout-variant($brand-danger, $alert-danger-text);
+}
+
+.callout-dark {
+  @include callout-variant($gray-light, $gray);
+}
+
+
+
+
+
+//
+// Global-Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.global-alert {
+  padding: 15px 0;
+  border: 1px solid transparent;
+  font-size: 14px;
+  // Headings for larger alerts
+  h4 {
+    margin-top: 0;
+    // Specified for the h4 to prevent conflicts of changing $headings-color
+    color: inherit;
+  }
+
+  .global-alert-title{
+    color: rgba(255, 255, 255, .6);
+  }
+
+  // Provide class for links that match alerts
+  .global-alert-link {
+    font-weight: $alert-link-font-weight;
+  }
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  .global-alert-content {
+    > p + p {
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+  }
+
+
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.global-alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.global-alert-dismissible {
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: 5px;
+    color: inherit;
+  }
+}
+
+// Alternate styles
+// Generate contextual modifier classes for colorizing the alert.
+.global-alert-default {
+  @include global-alert-variant($gray-light, $gray-light, #FFFFFF);
+}
+
+.global-alert-success {
+  @include global-alert-variant(#00A94F, #00A94F, #FFFFFF);
+}
+
+.global-alert-info {
+  @include global-alert-variant(#009FC2, #009FC2, #FFFFFF);
+}
+
+.global-alert-warning {
+  @include global-alert-variant(#f57b20, #f57b20, #FFFFFF);
+}
+
+.global-alert-danger {
+  @include global-alert-variant(#B01116, #B01116, #FFFFFF);
+}

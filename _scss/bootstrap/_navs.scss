@@ -1,0 +1,864 @@
+@mixin flexbox {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin visibility-transition--hidden {
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  transition: visibility 0.35s,width .2s,opacity .35s;
+}
+
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+.global-header {
+  background-color: rgba(230, 230, 230, 0.9);
+  @supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
+    background-color: rgba(230, 230, 230, 0.75);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }
+  .nav {
+    > li {
+      display: inline-block;
+      padding: 5px 0;
+
+      > a {
+        padding: 2px 15px;
+        color: #888888;
+        font-size: 10px;
+        line-height: 15px;
+        font-weight: normal;
+        text-transform: uppercase;
+        border-radius: 4px;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: #dddddd;
+        }
+      }
+
+      &.active {
+        > a {
+          text-decoration: none;
+          background-color: #dddddd;
+        }
+      }
+    }
+  }
+}
+
+.header-nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  @supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
+    background-color: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: brightness(130%) blur(15px);
+    backdrop-filter: brightness(130%) blur(15px);
+  }
+  &.solo {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  }
+}
+
+.product-nav {
+  font-size: $font-size-medium;
+
+  & {
+    background-color: rgba(237, 28, 36, 0.8);
+    color: #ffffff;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    @supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
+      background-color: rgba(237, 28, 36, 0.75);
+      -webkit-backdrop-filter: saturate(180%) blur(15px);
+      backdrop-filter: saturate(180%) blur(15px);
+    }
+    .product-search-button {
+      color: #ffffff;
+
+      &:hover,
+      &:focus {
+        color: #ffffff;
+        background-color: rgba(183, 31, 34, 0.8);
+        text-decoration: none;
+      }
+    }
+
+    .search-mobile {
+      .input-search {
+        color: #ffffff;
+        background-color: rgba(183, 31, 34, 0.8);
+      }
+    }
+
+    .dropdown-mobile {
+      a {
+        color: #ffffff;
+      }
+
+
+      .dropdown-menu-nav {
+        background-color: rgba(237, 28, 36, 0.8);
+        @supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
+          background-color: rgba(237, 28, 36, 0.7);
+          -webkit-backdrop-filter: saturate(180%) blur(15px);
+          backdrop-filter: saturate(180%) blur(15px);
+        }
+
+        .dropdown-item {
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .nav {
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+
+      > .product-title {
+        &:after {
+          color: #f8a0a3;
+        }
+      }
+
+      > li {
+        > a {
+          color: #ffffff;
+
+          &:hover,
+          &:focus {
+            background-color: rgba(183, 31, 34, 0.8);
+          }
+        }
+
+        &.active {
+          > a {
+            color: #ffffff;
+            background-color: rgba(183, 31, 34, 0.8);
+          }
+        }
+
+        &.open {
+          > a {
+            background-color: rgba(183, 31, 34, 0.8);
+          }
+        }
+      }
+    }
+  }
+
+  &.white {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: $text-color;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    @supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
+      background-color: rgba(255, 255, 255, 0.75);
+      -webkit-backdrop-filter: brightness(130%) blur(15px);
+      backdrop-filter: brightness(130%) blur(15px);
+    }
+
+    .product-search-button {
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        color: #ffffff;
+        background-color: transparentize($gray-darker, 0.3);
+      }
+    }
+
+    .search-mobile {
+      .input-search {
+        color: #fff;
+        background-color: transparentize($gray-darker, 0.3);
+      }
+    }
+
+    .dropdown-mobile {
+        a {
+          color: $text-color;
+        }
+      }
+
+      .dropdown-menu-nav {
+        background-color: rgba(255, 255, 255, 0.9);
+        @supports (-webkit-backdrop-filter: initial) or (backdrop-filter: initial) {
+          background-color: rgba(255, 255, 255, 0.7);
+          -webkit-backdrop-filter: brightness(130%) blur(15px);
+          backdrop-filter: brightness(130%) blur(15px);
+        }
+        .dropdown-item {
+          a {
+            color: $text-color;
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    .nav {
+      > .product-title {
+        &:after {
+          color: $gray-light;
+        }
+
+        &.active {
+          > a {
+            color: #ffffff;
+            background-color: transparentize($gray-darker, 0.3);
+          }
+        }
+
+        &.open {
+          > a {
+            color: #ffffff;
+            background-color: transparentize($gray-darker, 0.3);
+          }
+        }
+      }
+
+      > li {
+        > a {
+          color: $text-color;
+
+          &:hover,
+          &:focus {
+            color: #ffffff;
+            bbackground-color: transparentize($gray-darker, 0.3);
+          }
+        }
+
+        &.active {
+          > a {
+            color: #ffffff;
+            background-color: transparentize($gray-darker, 0.3);
+          }
+        }
+
+        &.open {
+          > a {
+            color: #ffffff;
+            background-color: transparentize($gray-darker, 0.3);
+          }
+        }
+      }
+    }
+
+
+  .desktop-nav {
+    > .product-title {
+      @include inline-flex;
+      @include visibility-transition--hidden;
+
+      height: 45px;
+      margin-left: -5px;
+      padding-right: 0px;
+      transition: all 0.8s ease;
+
+      > img {
+        margin: 8px 15px;
+      }
+
+      > span {
+
+        @include inline-flex;
+
+        width: 100%;
+
+        > img {
+          margin-right: 10px;
+        }
+      }
+
+      &:after {
+        content: "|";
+        position: relative;
+        right: -5px;
+        color: rgba(255, 255, 255, .5);
+      }
+
+      b {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 600;
+
+      }
+    }
+
+    .nav {
+      > li {
+        display: inline-block;
+        padding: 5px 0;
+
+        > a {
+          padding: 8px 10px;
+          color: #ffffff;
+          border-radius: 5px;
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            background-color: rgba(183, 31, 34, 0.8);
+          }
+        }
+
+        &.active {
+          > a {
+            padding: 8px 10px;
+            color: #ffffff;
+            border-radius: 5px;
+            background-color: rgba(183, 31, 34, 0.8);
+          }
+        }
+
+        &.open {
+          > a {
+            background-color: rgba(183, 31, 34, 0.8);
+          }
+        }
+      }
+    }
+
+    .product-search {
+      @include inline-flex;
+      @include visibility-transition--hidden;
+
+      margin-left: -5px;
+      padding-right: 0px;
+      transition: all 0.5s ease;
+
+      a {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .product-search-button {
+        cursor: pointer;
+        padding: 8px 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .container {
+    @include flexbox;
+
+    .dropdown-mobile {
+      @include flexbox;
+
+      width: 100%;
+      height: 45px;
+
+      .dropdown-menu-nav {
+        width: 100%;
+        position: fixed;
+        margin-top: 0px;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        list-style: none;
+        font-size: 14px;
+        text-align: left;
+        background-clip: padding-box;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), background 0.2s cubic-bezier(0, 0, 0.2, 1);
+        transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), background 0.2s cubic-bezier(0, 0, 0.2, 1);
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+        transform: rotateX(90deg);
+        transform-origin: top;
+
+        &.dropdown-menu-right {
+          opacity: 0;
+          visibility: hidden;
+          -webkit-transition: all 0.2s ease-in, background 0.2s ease-in;
+          transition: all 0.2s ease-in, background 0.2s ease-in;
+          -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+        }
+      }
+
+      &.open {
+        > .dropdown-menu-nav {
+          opacity: 1;
+          visibility: visible;
+          transform: rotateX(0deg);
+          transform-origin: top;
+        }
+      }
+
+      li {
+        a {
+          display: block;
+          padding: 20px;
+
+          &:hover {
+            background: rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+          }
+        }
+      }
+
+      > a {
+        font-size: 18px;
+      }
+
+      #product-list-menu,
+      #other-list-menu--two,
+      #other-list-menu--three,
+      #other-list-menu {
+        li {
+          a {
+            padding: 15px 70px;
+          }
+        }
+      }
+    }
+
+    .search-mobile {
+      @include visibility-transition--hidden;
+
+      height: 0px;
+      position: relative;
+
+      .input-search {
+        @include visibility-transition--hidden;
+
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        float: right;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        &:focus {
+          border-color: none;
+          outline: 0;
+          -webkit-box-shadow: none;
+          box-shadow: inset none;
+        }
+      }
+
+      .product-search-button-close,
+      .product-search-button-search {
+        background: 0 0;
+        border: 0;
+        bottom: 9px;
+        cursor: pointer;
+        height: 31px;
+        margin: auto;
+        padding: 5px 7px 3px;
+        position: absolute;
+        width: 30px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.8);
+
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+
+      .product-search-button-close {
+        right: 5px;
+      }
+
+      .product-search-button-search {
+        left: 5px;
+      }
+    }
+  }
+}
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+
+  // Override default ul/ol
+  list-style: none;
+
+  @include clearfix;
+
+  > li {
+    position: relative;
+    display: inline-block;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: $nav-link-padding;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: $nav-link-hover-bg;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: $nav-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        color: $nav-disabled-link-hover-color;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: $cursor-disabled;
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $nav-link-hover-bg;
+      border-color: $link-color;
+    }
+  }
+
+  // Nav dividers (deprecated with v3.0.1)
+  //
+  // This should have been removed in v3 with the dropping of `.nav-list`, but
+  // we missed it. We don't currently support this anywhere, but in the interest
+  // of maintaining backward compatibility in case you use it, it's deprecated.
+  .nav-divider {
+    @include nav-divider;
+  }
+
+  // Prevent IE8 from misplacing imgs
+  //
+  // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+  > li > a > img {
+    max-width: none;
+  }
+}
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  border-bottom: 1px solid #dddddd;
+
+  > li {
+    float: none;
+
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+
+    // Actual tabs (as links)
+    > a {
+      margin-right: 2px;
+      line-height: $line-height-base;
+      color: $text-color;
+
+      &:hover {
+        color: $brand-red;
+        background-color: #ffffff;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $brand-red;
+        background-color: #ffffff;
+        cursor: default;
+      }
+    }
+
+    //Border bottom effect
+    &:after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 4px;
+      width: 0px;
+      background: transparent;
+
+      @include transition($transition);
+    }
+
+    &.active:after,
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+      background: $brand-red;
+    }
+  }
+
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+    @extend .nav-justified;
+
+    @extend .nav-tabs-justified;
+  }
+}
+
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+    float: left;
+
+    // Links rendered as pills
+    > a {
+      border-radius: $nav-pills-border-radius;
+    }
+
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $nav-pills-active-link-hover-color;
+        background-color: $nav-pills-active-link-hover-bg;
+      }
+    }
+  }
+}
+
+// Stacked pills
+.nav-stacked {
+  > li {
+    float: none;
+
+    + li {
+      margin-top: 2px;
+      margin-left: 0;
+
+      // no need for this gap between nav items
+
+    }
+  }
+}
+
+// Nav variations
+// --------------------------------------------------
+
+// Justified nav links
+// -------------------------
+
+.nav-justified {
+  width: 100%;
+
+  > li {
+    float: none;
+
+    > a {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+
+  > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    > li {
+      display: table-cell;
+      width: 1%;
+
+      > a {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Move borders to anchors instead of bottom of list
+//
+// Mixin for adding on top the shared `.nav-justified` styles for our tabs
+.nav-tabs-justified {
+  border-bottom: 0;
+
+  > li > a {
+    // Override margin from .nav-tabs
+    margin-right: 0;
+    border-radius: $border-radius-base;
+  }
+
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus {
+    border: 1px solid $nav-tabs-justified-link-border-color;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    > li > a {
+      border-bottom: 1px solid $nav-tabs-justified-link-border-color;
+      border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+      border-bottom-color: $nav-tabs-justified-active-link-border-color;
+    }
+  }
+}
+
+// Tabbable tabs
+// -------------------------
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  margin-top: 30px;
+
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+// Dropdowns
+// -------------------------
+
+// Specific dropdowns
+.nav-tabs .dropdown-menu {
+  // make dropdown border overlap tab border
+  margin-top: -1px;
+
+  // Remove the top rounded corners here since there is a hard edge above the menu
+  @include border-top-radius(0);
+}
+
+// Header <-> Navigation Special Conditions
+// -------------------------
+
+.search-open {
+  &.product-nav {
+    .container {
+      .search-mobile {
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+        height: 45px;
+        padding-top: 5px;
+        float: right;
+      }
+
+      .input-search {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        float: right;
+      }
+
+      .dropdown-mobile,
+      .product-search-button {
+        opacity: 0;
+        position: fixed;
+        transition: opacity .35s,height .35s step-end;
+      }
+    }
+  }
+}
+
+.search-close {
+  &.product-nav {
+    .search-mobile {
+      @include visibility-transition--hidden;
+
+      height: 0px;
+    }
+  }
+}
+
+.slideUp {
+  .desktop-nav {
+    .product-title,
+    .product-search {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .product-title {
+      width: auto;
+      text-align: right;
+      margin-left: 0px;
+      padding-right: 10px;
+      max-width: 25%;
+    }
+
+    .product-search {
+      width: 145px;
+    }
+  }
+}
+
+.slideDown {
+  .product-title,
+  .product-search {
+    @include visibility-transition--hidden;
+
+    height: 40px;
+    margin-bottom: -15px;
+    margin-left: -300px;
+    transition: all .5s ease;
+  }
+}

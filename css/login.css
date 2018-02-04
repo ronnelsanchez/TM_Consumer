@@ -1,0 +1,114 @@
+html, body, main{
+    height: 100%;
+}
+
+.section{
+  padding: 30px 0;
+  border-bottom: 1px solid #dddddd;
+  height: 100%;
+}
+
+.section:first-child,.section:last-child{
+  border-bottom:0;
+}
+
+.container {
+  height: 100%;
+}
+.login-sign-title {
+  margin: 0;
+}
+
+.login-row{
+  height: 100%;
+display: table;
+}
+
+.login-full-page{
+  position: relative;
+display: table-cell;
+vertical-align: middle;
+
+}
+
+.login-body{
+-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+border-radius: 3px;
+padding: 25px;
+margin-bottom: 30px;
+background: #ffffff;
+}
+
+.login-customer {
+  text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+    margin-bottom: 17px;
+
+}
+
+.login-customer b{
+  font-weight: 600;
+}
+
+
+@media (min-width:320px){
+  body{
+    background-image: none;
+  }
+  .section {
+      padding-top:0;
+      height: auto;
+  }
+  .login-row,.login-full-page,.login-panel {
+    display: block;
+  }
+  .login-form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width:375px){
+
+}
+@media (min-width:480px){
+
+}
+@media (min-width:768px){
+  body {
+    background: url('../images/bg/community/community-gray-bg.png') #fafafa;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+  }
+  .section {
+    padding: 30px 0;
+    height: 100%;
+  }
+  .login-row,.login-panel {
+      display: table;
+  }
+  .login-full-page {
+    display: table-cell;
+  }
+  .login-form {
+    padding-left: 15px;
+  padding-right: 15px;
+  }
+}
+@media (min-width:992px){
+
+}
+@media (min-width:1200px){
+
+}
+@media (min-width:1440px){
+
+}
+@media (min-width:1600px){
+
+}
+@media (min-width:2560px){
+
+}

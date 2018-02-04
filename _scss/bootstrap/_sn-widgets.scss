@@ -1,0 +1,306 @@
+
+//
+// SN Widget for KB
+// --------------------------------------------------
+#SNWidgetKB {
+    border-bottom: 1px solid #eceeef;
+}
+
+
+// Base styles
+// -------------------------
+
+.sn-widget-kb {
+  margin: 20px auto;
+  border: 1px solid $gray-lighter;
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  max-width: 660px;
+  width: 100%;
+  .sn-widget-kb-content {
+      width: 100%;
+      .close {
+        border: 4px solid #949494;
+        border-radius: 50%;
+        display: block;
+        color: #424242;
+        width: 32px;
+        margin-right: 5px;
+        margin-top: 10px;
+        position: absolute;
+        right: 5px;
+      }
+
+      .sn-widget-kb-heading{
+        margin: 0;
+        padding: 15px 15px 15px 50px;
+      }
+
+      // Provide class for links that match alerts
+
+      // Improve alignment and spacing of inner content
+      > p,
+      > ul {
+        margin-bottom: 0;
+      }
+
+      .sn-widget-kb-body {
+        width: 100%;
+        float: none;
+        padding: 15px;
+        > p + p {
+          margin-top: 5px;
+          margin-bottom: 0;
+        }
+      }
+
+      .sn-widget-kb-tag {
+        padding: 15px;
+        text-align: center;
+      }
+  }
+
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.sn-widget-kb-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.sn-widget-kb-dismissible {
+  padding-right: ($alert-padding + 20);
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: 21px;
+    color: inherit;
+  }
+}
+
+// SN Widget KB Variant
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+
+.sn-widget-kb-success {
+  @include sn-widget-kb-variant($ms-success-bg, $ms-success-icon-flat);
+}
+
+.sn-widget-kb-info {
+  @include sn-widget-kb-variant($ms-info-bg, $ms-info-icon-flat);
+}
+
+.sn-widget-kb-warning {
+  @include sn-widget-kb-variant($ms-warning-bg, $ms-warning-icon-flat);
+}
+.sn-widget-kb-red {
+  @include sn-widget-kb-variant($ms-red-bg, $ms-red-icon-flat);
+}
+
+.sn-widget-kb-danger {
+  @include sn-widget-kb-variant($ms-danger-bg, $ms-danger-icon-flat);
+}
+
+
+@mixin sn-widget-kb-media-768(){
+  .sn-widget-kb-body {
+    width: 70% !important;
+    float: left !important;
+    padding: 15px 15px 15px 50px !important;
+  }
+
+  .sn-widget-kb-tag {
+    width: 30% !important;
+    float: right !important;
+  }
+};
+
+
+//
+// SN Widget for Product Page
+// --------------------------------------------------
+
+#SNWidgetPP {
+
+}
+.sn-widget-pp-product {
+  margin: 10px 0 5px;
+}
+// Base styles
+// -------------------------
+
+.sn-widget-pp {
+  margin: 20px auto;
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  width: 100%;
+  max-width: 800px;
+
+  .sn-widget-pp-content {
+
+      .sn-widget-pp-heading{
+        margin: 0;
+        padding: 15px 15px 15px 80px;
+        border-radius: 3px 3px 0 0;
+        line-height: 2.5;
+      }
+
+      .sn-widget-pp-body {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid $gray-lighter;
+        border-radius: 0 0 3px 3px;
+      }
+  }
+
+}
+
+.tag-list {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+
+  .tag {
+    text-align: center;
+    display: inline-block;
+    margin: auto 15px;
+    margin-bottom: 15px;
+    vertical-align: top;
+
+    .tag-section {
+      height: 70px;
+      width: 70px;
+      border-radius: 4px;
+      vertical-align: middle;
+      line-height: 2;
+      margin: auto;
+    }
+
+    .tag-heading{
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .tag-subtitle {
+      font-size: 14px;
+    }
+
+    &.tag-success {
+      .tag-section {
+        background-color: $ms-success-bg;
+        padding: 5px;
+        color: #ffffff;
+      }
+    }
+
+    &.tag-info {
+      .tag-section {
+        background-color: $ms-info-bg;
+        padding: 5px;
+        color: #ffffff;
+      }
+    }
+
+    &.tag-warning {
+      .tag-section {
+        background-color: $ms-warning-bg;
+        padding: 5px;
+        color: #ffffff;
+      }
+    }
+    &.tag-red {
+      .tag-section {
+        background-color: $ms-red-bg;
+        padding: 5px;
+        color: #ffffff;
+      }
+    }
+    &.tag-danger {
+      .tag-section {
+        background-color: $ms-danger-bg;
+        padding: 5px;
+        color: #ffffff;
+      }
+    }
+    &.tag-grey {
+      .tag-section {
+        background-color: $gray-light;
+        padding: 5px;
+        color: #ffffff;
+      }
+    }
+    &.tag-outline-success {
+      .tag-section {
+        border: 2px solid $ms-success-bg;
+        padding: 3px;
+        color: $ms-success-bg;
+      }
+    }
+
+    &.tag-outline-info {
+      .tag-section {
+        border: 2px solid $ms-info-bg;
+        padding: 3px;
+        color: $ms-info-bg;
+      }
+    }
+
+    &.tag-outline-warning {
+      .tag-section {
+        border: 2px solid $ms-warning-bg;
+        padding: 3px;
+        color: $ms-warning-bg;
+      }
+    }
+    &.tag-outline-red {
+      .tag-section {
+        border: 2px solid $ms-red-bg;
+        padding: 3px;
+        color: $ms-red-bg;
+      }
+    }
+    &.tag-outline-danger {
+      .tag-section {
+        border: 2px solid $ms-danger-bg;
+        padding: 3px;
+        color: $ms-danger-bg;
+      }
+    }
+    &.tag-outline-grey {
+      .tag-section {
+        border: 2px solid $gray-light;
+        padding: 3px;
+        color: $gray-light;
+      }
+    }
+
+  }
+}
+
+// SN Widget Product Page Variant
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+
+.sn-widget-pp-success {
+  @include sn-widget-pp-variant($ms-success-bg, $ms-success-icon-full);
+}
+
+.sn-widget-pp-info {
+  @include sn-widget-pp-variant($ms-info-bg, $ms-info-icon-full);
+}
+
+.sn-widget-pp-warning {
+  @include sn-widget-pp-variant($ms-warning-bg, $ms-warning-icon-full);
+}
+.sn-widget-pp-red {
+  @include sn-widget-pp-variant($ms-red-bg, $ms-expired-icon-full);
+}
+.sn-widget-pp-danger {
+  @include sn-widget-pp-variant($ms-danger-bg, $ms-danger-icon-full);
+}

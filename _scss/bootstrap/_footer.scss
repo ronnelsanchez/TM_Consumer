@@ -1,0 +1,40 @@
+//Footer and Footer nav
+
+.footer{
+  background-color: $gray-lighter;
+  font-size: $font-size-small;
+  padding: 15px 0;
+}
+
+.footer-nav {
+  padding-left: 0;
+    >li {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 15px;
+
+      >a {
+        color: $gray-darker;
+      }
+
+    }
+
+}
+
+.footer-text{
+  color: $gray-dark;
+}
+
+
+// Media Queires
+@mixin footer-media-768(){
+  .footer-text{
+    text-align: left;
+  }
+};
+
+@mixin footer-media-992(){
+  .footer-text{
+    text-align: right;
+  }
+};

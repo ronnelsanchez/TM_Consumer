@@ -1,0 +1,110 @@
+// Alerts
+
+@mixin alert-variant($background, $border, $text-color, $icon) {
+  background-color: $background;
+  border-color: $border;
+  color: $text-color;
+  padding-left: 50px;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+  .alert-link {
+    color: darken($text-color, 10%);
+  }
+
+  .alert-content {
+   position: relative;
+    &:before {
+      content: $icon;
+      font-family: FontAwesome;
+      font-size: 20px;
+      line-height: 1;
+      position: absolute;
+      top: 0;
+      left: -32px;
+    }
+  }
+}
+
+// Notification
+
+@mixin notification-variant($background, $border, $text-color, $icon) {
+  background-color: $background;
+  border-color: $border;
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+
+  .notification-title {
+    color: $text-color;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: Interstate-Light;
+  }
+
+  .notification-content {
+    display: block;
+    padding: 15px;
+    margin-left: 50px;
+    margin-right: 5px;
+    background-color: #fff;
+    margin-bottom: 0!important;
+
+    &:before {
+      content: $icon;
+      font-family: FontAwesome;
+      font-size: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      line-height: 20px;
+      width: 50px;
+      text-align: center;
+    }
+  }
+}
+
+// Global Alerts
+
+@mixin global-alert-variant($background, $border, $text-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $text-color;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+  a {
+    text-decoration: underline;
+    color: #ffffff;
+  }
+
+}
+
+
+
+// Callout
+
+@mixin callout-variant($border, $text-color) {
+  background-color: #ffffff;
+  border-left-color: $border;
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+
+  .callout-title {
+    color: $text-color;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .callout-content {
+    display: block;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 0!important;
+  }
+}

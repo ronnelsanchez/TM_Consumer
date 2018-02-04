@@ -1,0 +1,59 @@
+
+.feedback {
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  > button + button {
+    margin-left: 5px;
+  }
+
+}
+
+
+.feedback-title{
+  margin-top: 9px;
+  margin-bottom: 9px;
+  margin-right: 30px;
+  float: left;
+  line-height: 16px;
+}
+
+.feedback-solution {
+  #first-state{
+
+    .btn {
+      width: 100px;
+    }
+
+  }
+  #yes-state, #no-state {
+
+    .state-section {
+      .state-content{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+
+  }
+
+  #submit-feedback-yes,#submit-feedback-no,#cancel-feedback-no {
+        width: 100px;
+  }
+
+}
+
+// Media Queires
+@mixin feedback-solution-media-768(){
+  #yes-state, #no-state {
+    width: 100%;
+  }
+};
+
+@mixin feedback-solution-media-992(){
+  #yes-state, #no-state {
+    width: 50%;
+  }
+};

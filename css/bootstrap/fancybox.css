@@ -1,0 +1,14 @@
+/* line 1, D:/web-projects/TM_Consumer/scss/bootstrap/fancybox.scss */
+#fancybox-default {
+  border-radius: 4px;
+  /* Custom transition - slide from top*/
+  transform: translateY(-50px);
+  transition: all .33s;
+}
+
+/* line 9, D:/web-projects/TM_Consumer/scss/bootstrap/fancybox.scss */
+.fancybox-slide--current #fancybox-default {
+  transform: translateY(0);
+}
+
+/*# sourceMappingURL=../../css/bootstrap/fancybox.map */

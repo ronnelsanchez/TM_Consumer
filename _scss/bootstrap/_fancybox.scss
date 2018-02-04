@@ -1,0 +1,208 @@
+
+.popup-brand{
+  .brand-logo{
+    width: 30px;
+    height: 30px;
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .brand-corp{
+    font-size: 9px;
+    line-height: 10px;
+    font-family: "InterstateLight",Arial,sans-serif;
+    text-transform: uppercase;
+    color: #444;
+    display: block;
+    letter-spacing: -0.8px;
+  }
+  .brand-name{
+    font-style: normal;
+    font-size: 20px;
+    display: inline-block;
+    font-family: "Interstate",Arial,sans-serif;
+    color: #444;
+    float: left;
+    line-height: 20px;
+    margin: 0;
+    letter-spacing: -1.6px;
+    text-indent: -1px;
+  }
+
+}
+
+.fancybox-login {
+    padding: 0 !important;
+    width: 100%;
+    max-width: 850px;
+}
+
+.promo-login{
+  background:url('../images/tm/login-bg.jpg');
+  background-size:cover;
+  color:#ffffff;
+  height: 100%;
+
+  .login-navbar{
+    margin-bottom: 15px;
+    padding: 10px 0;
+  }
+
+  .promo-body{
+    text-shadow: 0px 0px 20px #000000;
+
+
+    &.desktop {
+        padding:15px;
+        > h3{
+          margin: 0;
+        }
+        > p{
+          margin-bottom: 30px;
+          font-size: 14px;
+        }
+        .promo-content{
+          width: 100%;
+          max-width: 300px;
+          margin: auto;
+        }
+    }
+
+    &.mobile{
+      .promo-carousel{
+        height: 100%;
+        display: none;
+
+        .flickity-page-dots {
+          bottom: 10px;
+          .dot{
+            background:#ffffff;
+          }
+        }
+        .promo-cell {
+          width: 100%;
+          height: 250px;
+          margin-right: 10px;
+          text-align: center;
+          }
+      }
+      .btn-dismiss-promo{
+         margin-top: 30px;
+       }
+    }
+
+  }
+}
+
+.login-container{
+  height: 100%;
+  width: 100%;
+}
+  .login-body{
+    padding:15px;
+
+      form {
+        .form-group {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        .error-message{
+          font-size: 14px;
+        }
+
+      }
+    }
+
+
+  .login-header {
+      margin-top: 40px;
+      margin-bottom: 25px;
+
+      .login-title{
+        margin: 0;
+        font-size: 28px;
+      }
+      .login-subtitle{
+        margin: 0;
+        font-size: 14px;
+      }
+
+  }
+
+  .login-footer-link {
+    margin-top: 15px;
+  }
+
+  .label-title {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .label-link {
+      font-size: 12px;
+      color:$gray-light;
+
+      &:hover,
+      &:focus,
+      &:active{
+        text-decoration: none;
+        color:$text-color;
+      }
+  }
+
+
+
+.fancybox-default {
+  transform: translateY(-60px) scale(1.1);
+  transition: all .33s;
+  border-radius: 3px;
+}
+
+.fancybox-slide--current .fancybox-default {
+  transform: translateY(0) scale(1);
+}
+
+
+// Media Queires
+
+@mixin fancybox-login-media-320{
+  .promo-login{
+    position: relative;
+    z-index: 2;
+  }
+  .login-content{
+    position: absolute;
+    z-index: 1;
+    display: none;
+  }
+  .fancybox-login{
+    margin: 0px!important;
+    height: 100%;
+  }
+}
+@mixin fancybox-login-media-768{
+  .promo-login{
+    position: inherit;
+    z-index: inherit;
+  }
+  .login-content{
+    position: inherit;
+    z-index: inherit;
+  }
+  .fancybox-login{
+    margin: 44px 0!important;
+    height: auto;
+  }
+}
+@mixin equal-media-768(){
+  .equal{
+    display: table;
+
+    > [class*="col-"] {
+      float: none;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+};

@@ -1,0 +1,35 @@
+
+@media (min-width:320px){
+  @include fancybox-login-media-320;
+}
+@media (min-width:375px){
+}
+@media (min-width:480px){
+  @include navbar-media-480;
+}
+@media (min-width:768px){
+  @include fancybox-login-media-768;
+  @include navbar-media-768;
+  @include footer-media-768;
+  @include equal-media-768;
+  @include feedback-solution-media-768;
+  @include sn-widget-kb-media-768;
+  @include article-body-media-768;
+}
+@media (min-width:992px){
+  @include footer-media-992;
+  @include feedback-solution-media-992;
+  @include article-body-media-992;
+}
+@media (min-width:1200px){
+  @include article-body-media-1200;
+}
+@media (min-width:1440px){
+
+}
+@media (min-width:1600px){
+
+}
+@media (min-width:2560px){
+
+}

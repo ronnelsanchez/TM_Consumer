@@ -1,0 +1,24 @@
+@mixin icon-variant($icon) {
+  position: relative;
+  display: inline-block;
+  &.right{
+    padding-right: 35px;
+      &:before{
+        content:$icon;
+        font-family: FontAwesome;
+        position: absolute;
+        right: 11px;
+        left: auto;
+      }
+  }
+
+  &.left{
+    padding-left: 35px;
+    &:before{
+      content:$icon;
+      font-family: FontAwesome;
+      position: absolute;
+      left: 11px;
+    }
+  }
+}

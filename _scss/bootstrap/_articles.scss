@@ -1,0 +1,33 @@
+
+.article-body {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+
+  .page-heading {
+    margin-top: 40px;
+    margin-bottom: 65px;
+  }
+}
+// Media Queires
+@mixin article-body-media-768(){
+  .article-body{
+    width: 100%;
+  }
+};
+
+@mixin article-body-media-992(){
+  .article-body{
+        width: 83.33333%;
+    margin-left: 8.33333%;
+  }
+};
+
+@mixin article-body-media-1200(){
+  .article-body{
+      margin-left: 8.33333%;
+      width: 83.33333%;
+  }
+};
