@@ -57,6 +57,61 @@
     });
     </script>
   </head>
+  <style>
+    
+    .nav-tabs-two {
+        border-bottom: 1px solid #dddddd
+    }
+
+    .nav-tabs-two>li {
+        float: none;
+        margin-bottom: -1px
+    }
+
+    .nav-tabs-two>li>a {
+    margin-right: 2px;
+    line-height: 1.42857;
+    color: #333;
+    padding: 10px 60px;
+    border: 1px solid #ddd;
+    margin-bottom: -5px;
+    border-bottom: 1px solid #fff;
+    background: #f5f5f5;
+    font-weight: 700;
+    border-top: 3px solid;
+}
+    }
+
+    .nav-tabs-two>li>a:hover {
+        color: #ED1C24;
+        background-color: #ffffff
+    }
+
+    .nav-tabs-two>li.active>a,.nav-tabs-two>li.active>a:hover,.nav-tabs-two>li.active>a:focus {
+    color: #ed1c24;
+    background-color: #ffffff;
+    cursor: default;
+    border-top: 3px solid;
+    }
+
+    .nav-tabs-two>li:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 4px;
+        width: 0px;
+        background: transparent;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out
+    }
+
+    .nav-tabs-two>li.active:after,.nav-tabs-two>li:hover:after,.nav-tabs-two>li:focus:after {
+        width: 100%;
+        background: #fff;
+    }
+
+  </style>
   <body>
     <header id="header" class="navbar navbar-default navbar-fixed-top">
       <div class="global-alert global-alert-info global-alert-dismissible" id="global-alert">
@@ -189,12 +244,12 @@
   <p>This article shows you how to download, install and activate additional protection to your other devices using your Trend Micro Security license.</p>
   <hr>
   <!-- Start -->
-  <ul class="tab-scroll tab-center nav nav-tabs text-center">
+  <ul class="tab-scroll tab-center nav nav-tabs nav-tabs-two text-center">
     <li class="active">
-      <a aria-expanded="true" data-toggle="tab" href="#tab1">Public</a>
+      <a aria-expanded="true" data-toggle="tab" href="#tab1"><i class="fa fa-eye" aria-hidden="true"></i> &nbsp; Public</a>
     </li>
     <li class="">
-      <a aria-expanded="false" data-toggle="tab" href="#tab2">SEM</a>
+      <a aria-expanded="false" data-toggle="tab" href="#tab2"><i class="fa fa-eye-slash" aria-hidden="true"></i> &nbsp; SEM</a>
     </li>
   </ul>
   <div class="tab-content">
