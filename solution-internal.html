@@ -111,6 +111,61 @@
         background: #fff;
     }
 
+    .align-text-right {
+      text-align: right;
+      padding-right: 15px;
+    }
+    .text-muted {
+      color: #999;
+      font-size: smaller;
+    }
+
+    #solution-details {
+      background: #fafafa;
+      font-size: smaller;
+    }
+
+    #solution-details .section {
+      padding: 5px;
+    }
+    #solution-details .container {
+      width: inherit;
+    }
+   #solution-details .section .section__title h6 {
+    padding-top: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #009fc2;
+    letter-spacing: 1px; }
+   #solution-details .section .section__body ul.section__body-items {
+    list-style: none;
+    padding-left: 0px; }
+     #solution-details .section .section__body ul.section__body-items li.section__body-item {
+          display: block !important;
+      margin-bottom: 0.2rem; }
+       #solution-details .section .section__body ul.section__body-items li.section__body-item .section__meta-data {
+        display: block !important;
+        margin-top: 10px;
+        max-width: 135px;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+         #solution-details .section .section__body ul.section__body-items li.section__body-item .section__meta-data p {
+          width: 100%;
+          margin-bottom: 0px;
+          padding-right: 15px;
+          color: #849296;
+          font-size: smaller; }
+       #solution-details .section .section__body ul.section__body-items li.section__body-item .section__meta-content {
+          display: -moz-inline-flex;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-line-pack: center;
+          align-content: center;
+          font-weight: normal;
+          color: #1f2d3d; }
   </style>
   <body>
     <header id="header" class="navbar navbar-default navbar-fixed-top">
@@ -313,48 +368,129 @@
     </div><!-- End Public -->
     <div class="tab-pane fade" id="tab2" role="tabpanel">
       <!-- Start SEM -->
-      <table class="table table-striped">
+
+      <p>First Version: </p>
+      <table class="table table-striped small">
         <tbody>
           <tr>
-            <td>Original Solution ID</td>
+            <td class="col-sm-3 align-text-right text-muted">Original Solution ID</td>
             <td>1104368</td>
           </tr>
-          <tr>
+<!--           <tr>
             <td>Related Case ID</td>
             <td>N/A</td>
-          </tr>
+          </tr> -->
           <tr>
-            <td>Contributor</td>
-            <td>Wilson Locsin (TS-PH); Michael Limon (TS-PH);</td>
+            <td class="col-sm-3 align-text-right text-muted">Contributors</td>
+            <td>Christian Santoalla (TS-PH), Aldrich Gregorio (TS-PH), Joey Villasenor (TS-PH), Richard Robledo (TS-PH), Aldever Calvo (TS-PH), Nathanael Alcain (TS-PH), Jesusa Cruz (TS-PH), Marlon Velasco (TS-PH), Jacquelyn Alicaya-Remulla (TS-PH), Frederick Pada (TS-PH), Martin Antonio (TS-PH), Helen Vicente (TS-PH), John Fajardo (TS-PH), Evan Sevilla (TS-PH), Carla Timtiman (TS-PH), Michael Limon (TS-PH), Self-Service Sustain</td>
           </tr>
-          <tr>
+<!--           <tr>
             <td>Department</td>
             <td>Support, General</td>
-          </tr>
-          <tr>
+          </tr> -->
+<!--           <tr>
             <td>Solution Status</td>
             <td>Published</td>
-          </tr>
+          </tr> -->
           <tr>
-            <td>First Published</td>
+            <td class="col-sm-3 align-text-right text-muted">First Published</td>
             <td>2014/08/21 2:59 AM</td>
           </tr>
           <tr>
-            <td>Expire Date</td>
+            <td class="col-sm-3 align-text-right text-muted">Expire Date</td>
             <td>2019/06/30 7:00 AM</td>
           </tr>
           <tr>
-            <td>Archive Date</td>
+            <td class="col-sm-3 align-text-right text-muted">Archive Date</td>
             <td>2018/06/30 7:00 AM</td>
           </tr>
           <tr>
-            <td>External Link</td>
+            <td class="col-sm-3 align-text-right text-muted">External Link</td>
             <td>
               <a href="http://esupport.trendmicro.com/en-us/home/pages/technical-support/maximum-security/1104368.aspx">1104368.aspx</a>
             </td>
           </tr>
         </tbody>
       </table>
+
+      <p>Second Version: </p>
+
+      <style>
+
+
+      </style>
+
+    <div id="solution-details">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section">
+              <div class="section__title">
+                <h6><strong><i class="fa fa-info-circle"></i> Solution Details</strong></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="section">
+              <div class="section__body">
+                <ul class="section__body-items">
+                  <li class="section__body-item">
+                    <span class="section__meta-data">
+                      <p>Original Solution ID</p>
+                    </span>
+                    <span class="section__meta-content">1104368</span>
+                  </li>
+                  <li class="section__body-item">
+                    <span class="section__meta-data">
+                      <p>Contributors</p>
+                    </span>
+                    <span class="section__meta-content">Christian Santoalla (TS-PH), Aldrich Gregorio (TS-PH), Joey Villasenor (TS-PH), Richard Robledo (TS-PH), Aldever Calvo (TS-PH), Nathanael Alcain (TS-PH), Jesusa Cruz (TS-PH), Marlon Velasco (TS-PH), Jacquelyn Alicaya-Remulla (TS-PH), Frederick Pada (TS-PH), Martin Antonio (TS-PH), Helen Vicente (TS-PH), John Fajardo (TS-PH), Evan Sevilla (TS-PH), Carla Timtiman (TS-PH), Michael Limon (TS-PH), Self-Service Sustain</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="section">
+              <div class="section__body">
+                <ul class="section__body-items">
+                  <li class="section__body-item">
+                    <span class="section__meta-data">
+                      <p>First Published</p>
+                    </span>
+                    <span class="section__meta-content">2014/08/21 2:59 AM</span>
+                  </li>
+                  <li class="section__body-item">
+                    <span class="section__meta-data">
+                      <p>Expire Date</p>
+                    </span>
+                    <span class="section__meta-content">2019/06/30 7:00 AM</span>
+                  </li>
+                   <li class="section__body-item">
+                    <span class="section__meta-data">
+                      <p>Archive Date</p>
+                    </span>
+                    <span class="section__meta-content">2018/06/30 7:00 AM</span>
+                  </li>
+                   <li class="section__body-item">
+                    <span class="section__meta-data">
+                      <p>External Link</p>
+                    </span>
+                    <span class="section__meta-content"><a href="http://esupport.trendmicro.com/en-us/home/pages/technical-support/maximum-security/1104368.aspx">1104368.aspx</a></span>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
       <hr>
       <!-- End SEM -->
     </div>
